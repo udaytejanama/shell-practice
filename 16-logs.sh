@@ -11,6 +11,7 @@ LOGFILE="$LOGPATH/$SCRIPTNAME.log"
 #LOGFILE=$(echo $0 | cut -d "." -f1) using cut command
 
 mkdir -p $LOGPATH
+echo "Script executed at the date : $(date)" | tee tee -a $LOGFILE
 USERID=$(id -u)
 if [ $USERID -ne 0 ]; then
     echo -e "$R FAILED  $N Please execute the script: $0 with root privilege"
@@ -31,7 +32,7 @@ if [ $? -ne 0 ]; then
     dnf install mysql -y &>> $LOGFILE
     VALIDATE $? "Mysql"
 else
-    echo -e "Mysql is already exist.. $Y SKIPPING $N"
+    echo -e "Mysql is already exist.. $Y SKIPPING $N" | tee -a $LOGFILE
 fi
 
 dnf list installed nginx &>> $LOGFILE
@@ -39,7 +40,7 @@ if [ $? -ne 0 ]; then
     dnf install nginx -y &>> $LOGFILE
     VALIDATE $? "nginx"
 else
-    echo -e "nginx is already exist.. $Y SKIPPING $N"
+    echo -e "nginx is already exist.. $Y SKIPPING $N" | tee -a $LOGFILE
 fi
 
 dnf list installed python3 &>> $LOGFILE
@@ -47,5 +48,5 @@ if [ $? -ne 0 ]; then
     dnf install python3 -y &>> $LOGFILE
     VALIDATE $? "python3"
 else
-    echo -e "python3 is already exist.. $Y SKIPPING $N"
+    echo -e "python3 is already exist.. $Y SKIPPING $N" | tee -a $LOGFILE
 fi
