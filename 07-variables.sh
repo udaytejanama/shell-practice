@@ -8,7 +8,7 @@ echo $start_date
 
 sleep 10
 
-end_date=$(date %s)
+end_date=$(date +%s)
 echo $end_date
 
 total_timediff=$((end_date - start_date))
