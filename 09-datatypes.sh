@@ -3,7 +3,7 @@
 NUMBER1=100.250
 NUMBER2=200.252
 NAME=DEVOPS
-sum = $(awk '{print $NUMBER1 + $NUMBER2}')
+sum=$(awk '{print $NUMBER1 + $NUMBER2}')
 echo "Total sum:: $sum"
 TOTAL=$(($NUMBER1 + $NUMBER2 | bc))
 
