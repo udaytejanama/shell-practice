@@ -1,6 +1,6 @@
 #!/bin/bash
 
-NUMBER1=10
+NUMBER1=$1
 
 if [ $NUMBER1 -lt 20 ]; then
     echo "Given number: $NUMBER1 is less than 20"
