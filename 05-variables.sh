@@ -1,6 +1,6 @@
 #!/bin/bash
 
 echo "Enter the password"
-read PASSWORD
+read -s PASSWORD
 
-echo "The entered password: $PASSWORD"
+echo "The entered password::$PASSWORD"
