@@ -11,7 +11,7 @@ LOGFILE="$LOGPATH/$SCRIPTNAME.log"
 #LOGFILE=$(echo $0 | cut -d "." -f1) using cut command
 
 mkdir -p $LOGPATH
-echo "Script executed at the date : $(date)" | tee tee -a $LOGFILE
+echo "Script executed at the date : $(date)" | tee -a $LOGFILE
 USERID=$(id -u)
 if [ $USERID -ne 0 ]; then
     echo -e "$R FAILED  $N Please execute the script: $0 with root privilege"
