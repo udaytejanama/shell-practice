@@ -2,7 +2,7 @@
 
 NUMBER1=100
 NUMBER2=200
-
-TOTAL=$(( $NUMBER1 + $NUMBER2 ))
+NAME=DEVOPS
+TOTAL=$(( $NUMBER1 + $NUMBER2 + $NAME ))
 
 echo "Total sum:: $TOTAL"
