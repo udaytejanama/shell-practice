@@ -10,5 +10,5 @@ TOTAL=$(($NUMBER1 + $NUMBER2)) # For integers
 
 echo "Total sum:: $TOTAL"
 
-LEADERS=("MODI","PUTIN","TRUMP","XINPING")
+LEADERS=("MODI" "PUTIN" "TRUMP" "XINPING")
 echo "The India leader: ${LEADERS[0]}"
