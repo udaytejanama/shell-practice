@@ -1,7 +1,7 @@
 #!/bin/bash
 
 NUMBER1=100
-NUMBER2=200.
+NUMBER2=200
 NAME=DEVOPS
 
 SUM=$(echo $NUMBER1 $NUMBER2 | awk '{print $1 + $2}') #For decimal numbers
