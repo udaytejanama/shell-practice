@@ -14,7 +14,7 @@ mkdir -p $LOGPATH
 echo "Script executed at the date : $(date)" | tee -a $LOGFILE
 USERID=$(id -u)
 if [ $USERID -ne 0 ]; then
-    echo -e "$R FAILED  $N Please execute the script: $0 with root privilege"
+    echo -e "$R FAILED  $N Please execute the script: $0 with root privilege" | tee -a $LOGFILE
     exit 1
 fi
 
