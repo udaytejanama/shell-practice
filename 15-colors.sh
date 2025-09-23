@@ -1,8 +1,8 @@
 #!/bin/bash
 
 R="\e[31m"
-R="\e[32m"
-R="\e[33m"
+G="\e[32m"
+Y="\e[33m"
 N="\e[0m"
 
 USERID=$(id -u)
